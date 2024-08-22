@@ -12,6 +12,10 @@ destination_hosts = [os.path.expandvars(host) for host in os.getenv('DESTINATION
 def convert_and_push(word_file, wiki_repo_path, destination_host):
     markdown_file = word_file.replace('.docx', '.md')
     
+    # Extract the filename from markdown_file and replace spaces with dashes
+    markdown_filename = os.path.basename(markdown_file).replace(' ', '-')
+    markdown_file = os.path.join(os.path.dirname(markdown_file), markdown_filename)
+    
     # Convert Word document to Markdown using pypandoc
     try:
         pypandoc.convert_file(word_file, 'markdown', outputfile=markdown_file)
