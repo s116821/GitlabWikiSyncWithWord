@@ -24,7 +24,7 @@ if (-Not (Test-Path $venvPath)) {
     pip install -r $requirementsPath
 
     # Deactivate virtual environment
-    & "$venvPath\Scripts\Deactivate.ps1"
+    & deactivate
 }
 
 # Check if the scheduled task already exists
