@@ -36,7 +36,6 @@ This deployment is made for a self-hosted version of Gitlab.  I've not tested it
 6. Run the deployment script (WINDOWS ONLY, you may need to run inside an admin shell):
     `.\install_task.ps1`
 
-
 ## Dealing with Gitlab Host Servers with Non-standard SSH Port
 
 If your self-hosted instance has it's sshd port set to something other than the default, you should know that the gitlab instance WILL STILL run its own sshd on the standard port.  So, if your local dev machine ssh config file has an entry in it for the custom SSH port, you will need to make an alias entry for the gitlab host so it routes to the right port.  For example:  
