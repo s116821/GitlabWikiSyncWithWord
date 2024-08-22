@@ -9,6 +9,8 @@ This section briefly describes the process to setup the repository for local tes
     `.\dev_setup.ps1`
 4. Modify the `.env` file as needed for your local testing
 5. Enjoy
+    a. If you needed to update the dependencies, make sure to update the dependency list as well (WHILE IN THE VIRTUAL ENVIRONMENT) like so:
+        `pip freeze > requirements.txt`
 
 ## Deployment
 This section briefly explains the deployment process of the python module as a background task on a Windows Machine.

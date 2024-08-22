@@ -18,7 +18,7 @@ if (-Not (Test-Path $venvPath)) {
     pip install -r $requirementsPath
 
     # Deactivate virtual environment
-    & "$venvPath\Scripts\Deactivate.ps1"
+    & deactivate
 }
 
 # Copy default.env to .env if .env doesn't exist
